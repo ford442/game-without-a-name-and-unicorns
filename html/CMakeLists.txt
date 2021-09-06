@@ -40,7 +40,7 @@ add_dependencies(game generate_structs_for_game)
 set(CMAKE_CXX_FLAGS  "-O3 -lwebsocket.js")
 
 set_target_properties(game PROPERTIES SUFFIX ".html")
-set_target_properties(game PROPERTIES LINK_FLAGS "-ffast-math -flto=thin -sAGGRESSIVE_VARIABLE_ELIMINATION=1 -sELIMINATE_DUPLICATE_FUNCTIONS=1 -fno-rtti -fno-exceptions  -s MALLOC="emmalloc" -s USES_DYNAMIC_ALLOC=0 -s SUPPORT_LONGJMP=0 -DNDEBUG -sASSERTIONS=0 -sALLOW_MEMORY_GROWTH=0 -s TOTAL_MEMORY=1400mb --closure 1 -g0 -s DISABLE_EXCEPTION_CATCHING=0 -s USE_GLFW=3 -s USE_WEBGL2=1 -s BINARYEN_METHOD='native-wasm' --preload-file ../assets --shell-file index.html")
+set_target_properties(game PROPERTIES LINK_FLAGS "-ffast-math -flto=thin -sAGGRESSIVE_VARIABLE_ELIMINATION=1 -sELIMINATE_DUPLICATE_FUNCTIONS=1 -fno-rtti -fno-exceptions  -s MALLOC='emmalloc' -s USES_DYNAMIC_ALLOC=0 -s SUPPORT_LONGJMP=0 -DNDEBUG -sASSERTIONS=0 -sALLOW_MEMORY_GROWTH=0 -s TOTAL_MEMORY=1400mb --closure 1 -g0 -s DISABLE_EXCEPTION_CATCHING=0 -s USE_GLFW=3 -s USE_WEBGL2=1 -s BINARYEN_METHOD='native-wasm' --preload-file ../assets --shell-file index.html")
 
 # creates the "out" directory:
 add_custom_command(
